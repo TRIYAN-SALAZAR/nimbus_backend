@@ -1,7 +1,6 @@
 import { supabase } from '../config/supabase.js';
 import { fromSupabase } from '../utils/AppError.js';
 
-// La capa de servicio es la ÚNICA que habla con Supabase.
 const TABLE = 'producto';
 
 export async function listar({ soloActivos = true } = {}) {

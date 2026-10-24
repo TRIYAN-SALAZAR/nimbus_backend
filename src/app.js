@@ -9,7 +9,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Verifica que la conexión a Supabase funciona
 app.get('/health', async (req, res) => {
   const { error } = await supabase.from('metodo_pago').select('id_metodo_pago', { head: true, count: 'exact' });
   if (error) return res.status(500).json({ ok: false, db: 'error', message: error.message });

@@ -1,9 +1,7 @@
 import { createClient } from '@supabase/supabase-js';
-import { env } from './env.js';
+let env = process.env;
 
-// Cliente único (singleton) reutilizado en todo el backend.
-// Usa la service_role key, que ignora RLS: por eso solo vive aquí.
-export const supabase = createClient(env.supabaseUrl, env.supabaseServiceKey, {
+export const supabase = createClient(env.SUPABASE_URL, env.SUPABASE_KEY, {
   auth: {
     persistSession: false,
     autoRefreshToken: false,

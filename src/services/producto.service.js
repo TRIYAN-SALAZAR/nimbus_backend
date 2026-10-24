@@ -10,6 +10,7 @@ export async function listar({ soloActivos = true } = {}) {
 
   const { data, error } = await query;
   if (error) throw fromSupabase(error);
+  console.log(data)
   return data;
 }
 

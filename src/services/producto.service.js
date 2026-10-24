@@ -5,8 +5,9 @@ const TABLE = 'producto';
 
 export async function listar({ soloActivos = true } = {}) {
   let query = supabase.from(TABLE).select('*, variante(*)').order('nombre');
-  if (soloActivos) query = query.eq('activo', true);
-
+  if (soloActivos) {
+    query = query.eq('activo', true).eq('variante.activo', true);
+  }
   const { data, error } = await query;
   if (error) throw fromSupabase(error);
   console.log(data)

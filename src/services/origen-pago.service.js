@@ -26,7 +26,7 @@ export async function actualizar(id, campos) {
   const { data, error } = await supabase
     .from(TABLE)
     .update(campos)
-    .eq('id_origen_pago', id)
+    .eq('id_origen', id)
     .select()
     .single();
   if (error) throw fromSupabase(error);
@@ -37,7 +37,7 @@ export async function eliminar(id) {
   const { data, error } = await supabase
     .from(TABLE)
     .delete()
-    .eq('id_origen_pago', id)
+    .eq('id_origen', id)
     .select()
     .single();
   if (error) throw fromSupabase(error);

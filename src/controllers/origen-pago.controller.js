@@ -17,7 +17,10 @@ export const crear = asyncHandler(async (req, res) => {
 });
 
 export const actualizar = asyncHandler(async (req, res) => {
-  const { nombre, tipo, activo } = req.body;
+  const { nombre, tipo, activo } = req.body ?? {};
+  if (nombre === undefined && tipo === undefined && activo === undefined) {
+    throw new AppError('Debe enviar al menos un campo para actualizar', 400);
+  }
   const data = await origenPagoService.actualizar(req.params.id, { nombre, tipo, activo });
   res.json({ ok: true, data });
 });

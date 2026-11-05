@@ -8,6 +8,7 @@ import extraRoutes from './extra.routes.js';
 import recetaRoutes from './receta.routes.js';
 import compraRoutes from './compra.routes.js';
 import ventaRoutes from './venta.routes.js';
+import stockRoutes from './stock.routes.js';
 
 const router = Router();
 
@@ -20,5 +21,6 @@ router.use('/extras', extraRoutes);
 router.use('/recetas', recetaRoutes);
 router.use('/compras', compraRoutes);
 router.use('/ventas', ventaRoutes);
+router.use('/stock', stockRoutes);
 
 export default router;

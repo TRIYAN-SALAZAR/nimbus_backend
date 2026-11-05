@@ -7,6 +7,14 @@ export class AppError extends Error {
 }
 
 export function fromSupabase(error) {
-  const status = error.code === 'PGRST116' ? 404 : error.code === '23503' ? 409 : 400;
+  const statusByCode = {
+    PGRST116: 404,
+    '23503': 409,
+    '23505': 409,
+    '23502': 400,
+    '23514': 400,
+    '22P02': 400,
+  };
+  const status = statusByCode[error.code] || 400;
   return new AppError(error.message, status, error.details ?? null);
 }

@@ -51,4 +51,6 @@ select
     and coalesce(c.total_comprado, 0) - coalesce(ct.total_consumido, 0) <= i.stock_minimo
   ) as necesita_reabastecimiento
 from public.insumo i
+left join compras c on c.id_insumo = i.id_insumo
+left join consumo_total ct on ct.id_insumo = i.id_insumo
 where i.activo = true;

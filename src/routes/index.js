@@ -9,6 +9,7 @@ import recetaRoutes from './receta.routes.js';
 import compraRoutes from './compra.routes.js';
 import ventaRoutes from './venta.routes.js';
 import stockRoutes from './stock.routes.js';
+import proveedorRoutes from './proveedor.routes.js';
 
 const router = Router();
 
@@ -22,5 +23,6 @@ router.use('/recetas', recetaRoutes);
 router.use('/compras', compraRoutes);
 router.use('/ventas', ventaRoutes);
 router.use('/stock', stockRoutes);
+router.use('/proveedores', proveedorRoutes);
 
 export default router;

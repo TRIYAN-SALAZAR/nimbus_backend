@@ -5,6 +5,7 @@ import origenPagoRoutes from './origen-pago.routes.js';
 import insumoRoutes from './insumo.routes.js';
 import varianteRoutes from './variante.routes.js';
 import extraRoutes from './extra.routes.js';
+import recetaRoutes from './receta.routes.js';
 
 const router = Router();
 
@@ -14,5 +15,6 @@ router.use('/origenes-pago', origenPagoRoutes);
 router.use('/insumos', insumoRoutes);
 router.use('/variantes', varianteRoutes);
 router.use('/extras', extraRoutes);
+router.use('/recetas', recetaRoutes);
 
 export default router;

@@ -72,6 +72,8 @@ async function restoreBackup() {
     '--dbname',
     restoreUrl,
     '--schema=public',
+    '--clean',
+    '--if-exists',
     '--no-owner',
     '--no-privileges',
     backupPath,

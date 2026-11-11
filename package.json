@@ -11,11 +11,14 @@
     "start": "node src/server.js",
     "dev": "node --watch --env-file=.env src/server.js",
     "respaldo": "node --env-file=.env src/scripts/respaldo.js backup",
-    "restaurar": "node --env-file=.env src/scripts/respaldo.js restore"
+    "restaurar": "node --env-file=.env src/scripts/respaldo.js restore",
+    "usuarios": "node --env-file=.env src/scripts/usuarios.js"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.118.0",
     "cors": "^2.8.5",
-    "express": "^5.3.0"
+    "express": "^5.3.0",
+    "pg": "^8.23.1",
+    "pg-format": "^1.0.4"
   }
 }

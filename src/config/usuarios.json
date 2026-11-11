@@ -1,0 +1,12 @@
+[
+  { "username": "gerente_cafe", "funcion": "Gerencia" },
+  { "username": "cajero_matutino", "funcion": "Caja, turno matutino" },
+  { "username": "cajero_vespertino", "funcion": "Caja, turno vespertino" },
+  { "username": "barista_1", "funcion": "Barra" },
+  { "username": "almacenista", "funcion": "Inventario de insumos" },
+  { "username": "comprador", "funcion": "Compras" },
+  { "username": "contador", "funcion": "Contabilidad" },
+  { "username": "auditor", "funcion": "Auditoría" },
+  { "username": "analista_ventas", "funcion": "Análisis" },
+  { "username": "capturista_menu", "funcion": "Catálogo" }
+]

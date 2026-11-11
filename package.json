@@ -9,7 +9,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/server.js",
-    "dev": "node --watch --env-file=.env src/server.js"
+    "dev": "node --watch --env-file=.env src/server.js",
+    "respaldo": "node --env-file=.env src/scripts/respaldo.js backup",
+    "restaurar": "node --env-file=.env src/scripts/respaldo.js restore"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.118.0",

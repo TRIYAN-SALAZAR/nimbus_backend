@@ -40,5 +40,5 @@ export async function registrar({ venta, detalles }) {
     p_detalles: detalles,
   });
   if (error) throw fromSupabase(error);
-  return data;
+  return obtenerPorId(data.id_venta);
 }

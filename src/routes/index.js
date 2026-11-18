@@ -11,6 +11,7 @@ import ventaRoutes from './venta.routes.js';
 import stockRoutes from './stock.routes.js';
 import proveedorRoutes from './proveedor.routes.js';
 import clienteRoutes from './cliente.routes.js';
+import reporteRoutes from './reporte.routes.js';
 
 const router = Router();
 
@@ -26,5 +27,6 @@ router.use('/ventas', ventaRoutes);
 router.use('/stock', stockRoutes);
 router.use('/proveedores', proveedorRoutes);
 router.use('/clientes', clienteRoutes);
+router.use('/reportes', reporteRoutes);
 
 export default router;
